@@ -46,7 +46,7 @@
   
         await Location.startLocationUpdatesAsync(LOCATION_TRACKING, {
           accuracy: Location.Accuracy.Balanced,
-          timeInterval: 1000,
+          timeInterval: 10000,
           distanceInterval: 0,
           foregroundService: {
             notificationTitle: "Tracking actif",

@@ -15,10 +15,10 @@
     if (data) {
       const { locations } = data;
       try {
-      console.log("locations=>",locations)
         await axios.post('http://192.168.1.14:3000/api/tracking/add', {
           lalt: locations[0].coords.latitude,
-          lang: locations[0].coords.longitude
+          lang: locations[0].coords.longitude,
+          timestamp: locations[0].timestamp
         });
       } catch (err) {
         console.error('Erreur envoi données:', err);
@@ -46,8 +46,8 @@
   
         await Location.startLocationUpdatesAsync(LOCATION_TRACKING, {
           accuracy: Location.Accuracy.Balanced,
-          timeInterval: 1000,
-          distanceInterval: 0,
+          timeInterval: 10000,
+          distanceInterval: 10,
           foregroundService: {
             notificationTitle: "Tracking actif",
             notificationBody: "Localisation en cours..."
