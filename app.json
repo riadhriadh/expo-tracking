@@ -15,7 +15,8 @@
         "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to your location to track your position even when the app is in background.",
         "NSLocationAlwaysUsageDescription": "This app needs access to your location to track your position even when the app is in background.",
         "UIBackgroundModes": ["location", "fetch"]
-    },
+	  }
+	},
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
